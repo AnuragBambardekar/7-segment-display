@@ -2,18 +2,20 @@ let nums = [0x7E, 0x30, 0x6D, 0x79, 0x33, 0x5B, 0x5F, 0x70, 0x7F, 0x7B];
 let index = 0;
 
 function setup() {
-  createCanvas(1200, 400); // Increased canvas width to accommodate multiple displays
+  createCanvas(1260, 400); // Increased canvas width to accommodate multiple displays
   frameRate(1);
 }
 
 function draw() {
   background(0);
-  sevenSegment(nums[index], 0, 100); // Display 1
-  sevenSegment(nums[index], 200, 100); // Display 2
-  sevenSegment(nums[index], 400, 100); // Display 3
-  sevenSegment(nums[index], 600, 100); // Display 4
-  sevenSegment(nums[index], 800, 100); // Display 5
-  sevenSegment(nums[index], 1000, 100); // Display 6
+  sevenSegment(nums[index], 0, 50); // Display 1
+  sevenSegment(nums[index], 200, 50); // Display 2
+  drawColon(400, 180);
+  sevenSegment(nums[index], 400, 50); // Display 3
+  sevenSegment(nums[index], 600, 50); // Display 4
+  drawColon(800, 180);
+  sevenSegment(nums[index], 800, 50); // Display 5
+  sevenSegment(nums[index], 1000, 50); // Display 6
   index = (index + 1) % nums.length;
 }
 
@@ -25,6 +27,13 @@ function getColor(val, shift) {
 function drawSegment(x, y, w, h, val, shift) {
   fill(getColor(val, shift));
   rect(x, y, w, h, 10);
+}
+
+function drawColon(x,y) {
+    fill(color(255,0,0))
+	ellipse(x, y, 10, 10) // x,y,w,h
+	ellipse(x-5, y+50, 10, 10)
+	translate(30, 0)
 }
 
 function sevenSegment(val, offsetX, offsetY) {
