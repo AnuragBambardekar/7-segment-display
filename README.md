@@ -29,3 +29,16 @@ The `displayTime` function takes a value (hours, minutes, or seconds) and render
 The `drawColon` function draws the colon separator between the minutes and seconds digits. It alternates between a filled colon and an empty colon every second.
 
 The code fetches the current time from the system using the `Date` object in JavaScript. The `getHours()`, `getMinutes()`, and `getSeconds()` methods are used to retrieve the hours, minutes, and seconds values, respectively.
+
+Timer
+![Timer](image-2.png)
+
+Clock
+![Clock](image-1.png)
+
+Date and Time
+![Date and Time](image.png)
+
+# References:
+- https://www.youtube.com/watch?v=MlRlgbrAVOs&t - The Coding Train Coding Challenge #117: Seven-Segment Display
+- https://editor.p5js.org/Khaley4/sketches/By3E58MsX
